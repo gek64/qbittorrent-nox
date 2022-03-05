@@ -6,12 +6,12 @@
 ### FreeBSD
 ```sh
 # get files
-fetch https://github.com/gek64/qbittorrent-nox-shared/releases/download/v4.4.1/libtorrent_freebsd_v2.0.5.zip
-fetch https://github.com/gek64/qbittorrent-nox-shared/releases/download/v4.4.1/qbittorrent_freebsd_v4.4.1.zip
+fetch https://github.com/gek64/qbittorrent-nox-shared/releases/download/v4.4.1/libtorrent_freebsd.zip
+fetch https://github.com/gek64/qbittorrent-nox-shared/releases/download/v4.4.1/qbittorrent_freebsd.zip
 
 # unzip
-unzip libtorrent_freebsd_v2.0.5.zip
-unzip qbittorrent_freebsd_v4.4.1.zip
+unzip libtorrent_freebsd.zip
+unzip qbittorrent_freebsd.zip
 
 # copy to folder
 cp static/lib/libtorrent-rasterbar.so.2.0.5 /usr/local/lib/
@@ -28,12 +28,12 @@ chmod +x /usr/local/bin/qbittorrent-nox
 ### Linux(for example ubuntu/debian)
 ```sh
 # get files
-wget https://github.com/gek64/qbittorrent-nox-shared/releases/download/v4.4.1/libtorrent_linux_v2.0.5.zip
-wget https://github.com/gek64/qbittorrent-nox-shared/releases/download/v4.4.1/qbittorrent_linux_v4.4.1.zip
+wget https://github.com/gek64/qbittorrent-nox-shared/releases/download/v4.4.1/libtorrent_linux.zip
+wget https://github.com/gek64/qbittorrent-nox-shared/releases/download/v4.4.1/qbittorrent_linux.zip
 
 # unzip
-unzip libtorrent_linux_v2.0.5.zip
-unzip qbittorrent_linux_v4.4.1.zip
+unzip libtorrent_linux.zip
+unzip qbittorrent_linux.zip
 
 # copy to folder
 ## ubuntu
