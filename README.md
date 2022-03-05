@@ -2,7 +2,7 @@
 - `libtorrent` shared build
 - `qbittorrent-nox` shared build
 
-## Usage
+## Install
 ### Linux(for example ubuntu/debian)
 ```sh
 # get files
