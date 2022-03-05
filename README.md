@@ -14,11 +14,7 @@ unzip libtorrent_linux.zip
 unzip qbittorrent_linux.zip
 
 # copy to folder
-## ubuntu
-cp static/lib/libtorrent-rasterbar.so.2.0.5 /lib/
-## debian
 cp static/lib/libtorrent-rasterbar.so.2.0.5 /usr/lib/
-## copy bin
 cp static/bin/qbittorrent-nox /usr/local/bin/
 
 # install dependencies 
