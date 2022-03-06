@@ -65,7 +65,16 @@ ls qbittorrent*.zip libtorrent*.zip
 ```
 
 
-## QA
+## System Requirements
+### Prebuilt Binaries
+- x64 Architecture CPU
+- linux version tested on ubuntu 20.04 and debian 11
+- freebsd version tested on freebsd 13
+
+### Compile
+- Any architecture CPU
+- RAM > 4GB (recommend)
+- Disk > 10GB (recommend)
 
 
 ## License
