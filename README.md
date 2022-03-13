@@ -3,29 +3,6 @@
 - `qbittorrent-nox` shared build
 
 ## Install
-### Linux(for example ubuntu/debian)
-```sh
-# get files
-wget https://github.com/gek64/qbittorrent-nox-shared/releases/download/v4.4.1/libtorrent_linux.zip
-wget https://github.com/gek64/qbittorrent-nox-shared/releases/download/v4.4.1/qbittorrent_linux.zip
-
-# unzip
-unzip libtorrent_linux.zip
-unzip qbittorrent_linux.zip
-
-# copy to folder
-cp static/lib/libtorrent-rasterbar.so.2.0.5 /usr/lib/
-cp static/bin/qbittorrent-nox /usr/local/bin/
-
-# install dependencies 
-apt update && apt install -y libqt5network5 libqt5xml5 libqt5sql5
-
-# test run
-chmod +x /usr/local/bin/qbittorrent-nox
-/usr/local/bin/qbittorrent-nox -v
-```
-
-### FreeBSD
 ```sh
 # get files
 fetch https://github.com/gek64/qbittorrent-nox-shared/releases/download/v4.4.1/libtorrent_freebsd.zip
@@ -49,14 +26,6 @@ chmod +x /usr/local/bin/qbittorrent-nox
 
 ## Compile
 ### How to compile if prebuilt binaries can not run
-### Linux(for example ubuntu/debian)
-```sh
-wget https://github.com/gek64/qbittorrent-nox-shared/raw/main/qbittorrent_build_linux.sh
-chmod +x qbittorrent_build_linux.sh
-./qbittorrent_build_linux.sh
-ls qbittorrent*.zip libtorrent*.zip
-```
-### FreeBSD
 ```sh
 fetch https://github.com/gek64/qbittorrent-nox-shared/raw/main/qbittorrent_build_freebsd.sh
 chmod +x qbittorrent_build_freebsd.sh
@@ -64,11 +33,9 @@ chmod +x qbittorrent_build_freebsd.sh
 ls qbittorrent*.zip libtorrent*.zip
 ```
 
-
 ## System Requirements
 ### Prebuilt Binaries
 - x64 Architecture CPU
-- linux version tested on ubuntu 20.04 and debian 11
 - freebsd version tested on freebsd 13
 
 ### Compile
