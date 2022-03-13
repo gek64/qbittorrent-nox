@@ -1,6 +1,8 @@
-# Version
-- `libtorrent`:`v2.0.5`
-- `qbittorrent-nox`:`v4.4.1`
+## Version
+### libtorrent
+- `v2.0.5`
+### qbittorrent-nox
+- `v4.4.1`
 
 ## Install
 ```sh
