@@ -1,6 +1,6 @@
-# qbittorrent-nox-shared
-- `libtorrent` shared build
-- `qbittorrent-nox` shared build
+# qbittorrent-nox for freebsd
+- `libtorrent` v2.05
+- `qbittorrent-nox` v4.4.1
 
 ## Install
 ```sh
