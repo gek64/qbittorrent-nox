@@ -1,4 +1,4 @@
-# qbittorrent-nox build
+# qBittorrent-nox Build
 - `libtorrent`:`v2.0.5`
 - `qbittorrent-nox`:`v4.4.1`
 
