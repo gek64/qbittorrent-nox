@@ -28,7 +28,6 @@ chmod +x /usr/local/bin/qbittorrent-nox
 fetch https://github.com/gek64/qbittorrent-nox-shared/raw/main/qbittorrent_build_freebsd.sh
 chmod +x qbittorrent_build_freebsd.sh
 ./qbittorrent_build_freebsd.sh
-ls qbittorrent*.zip libtorrent*.zip
 ```
 
 ## System Requirements
