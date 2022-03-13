@@ -1,6 +1,7 @@
 #!/bin/sh
 
-# runtime pkg update && pkg install -y openssl qt5-network qt5-sql qt5-xml
+# runtime 
+# pkg update && pkg install -y openssl qt5-network qt5-sql qt5-xml
 
 # libtorrent
 pkg update
