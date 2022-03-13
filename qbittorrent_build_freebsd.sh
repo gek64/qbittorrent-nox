@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# runtime pkg update && pkg install -y openssl qt5-network qt5-sql qt5-xml
+
 # libtorrent
 pkg update
 pkg install -y git zip boost_build boost-all
