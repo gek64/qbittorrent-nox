@@ -1,4 +1,4 @@
-# qbittorrent-nox for freebsd
+# qbittorrent-nox build
 - `libtorrent`:`v2.0.5`
 - `qbittorrent-nox`:`v4.4.1`
 
