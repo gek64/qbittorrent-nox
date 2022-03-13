@@ -1,6 +1,6 @@
 # qbittorrent-nox for freebsd
-- `libtorrent` v2.05
-- `qbittorrent-nox` v4.4.1
+- `libtorrent`:`v2.0.5`
+- `qbittorrent-nox`:`v4.4.1`
 
 ## Install
 ```sh
