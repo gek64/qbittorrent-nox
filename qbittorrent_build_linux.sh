@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# runtime
+# apt update && apt install -y libqt5network5 libqt5xml5 libqt5sql5
+
 # libtorrent
 apt update
 apt install -y build-essential git zip libboost-tools-dev libboost-dev libboost-system-dev libssl-dev
