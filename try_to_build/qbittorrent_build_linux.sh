@@ -1,26 +1,19 @@
 #!/bin/sh
 
-# runtime 
-# pkg update && pkg install -y openssl qt5-network qt5-sql qt5-xml
-
 # libtorrent
-pkg update
-pkg install -y git boost_build boost-all
+apt update
+apt install -y build-essential git zip libboost-tools-dev libboost-dev libboost-system-dev libssl-dev
 git clone --depth 1 --recurse-submodules --branch `git ls-remote --tags --refs https://github.com/arvidn/libtorrent.git | tail --lines=1 | cut -d "/" -f 3` https://github.com/arvidn/libtorrent.git
 cd libtorrent || exit
-b2 install toolset=clang cxxstd=17 variant=release crypto=openssl dht=on -j `sysctl -n hw.ncpu` cxxflags="-I/usr/local/include/" linkflags="-L/usr/local/lib/" link=shared runtime-link=shared boost-link=static --prefix=./static/
-cp static/lib/libtorrent-rasterbar.so.2.0.5 ..
+b2 install toolset=gcc cxxstd=17 variant=release crypto=openssl dht=on -j `nproc` link=shared runtime-link=shared boost-link=static --prefix=./static/
+zip -r ../libtorrent_linux.zip static
 cd .. || exit
 
 # qbittorrent
-pkg update
-pkg install -y pkgconf qt5-core qt5-buildtools qt5-qmake qt5-network qt5-linguisttools qt5-sql openssl
+apt update
+apt install -y pkg-config qtbase5-dev qttools5-dev zlib1g-dev
 git clone --depth 1 --branch `git ls-remote --tags --refs https://github.com/qbittorrent/qBittorrent | tail --lines=1 | cut -d "/" -f 3` https://github.com/qbittorrent/qBittorrent
 cd qBittorrent || exit
 ./configure --disable-gui --disable-qt-dbus CXXFLAGS="-std=c++17" libtorrent_CFLAGS="-I`pwd`/../libtorrent/include/" libtorrent_LIBS="-L`pwd`/../libtorrent/static/lib/ -l:libtorrent-rasterbar.so" --prefix=`pwd`/static/
-make install -j `sysctl -n hw.ncpu`
-cp static/bin/qbittorrent-nox ..
-cd .. || exit
-
-# list build files
-ls libtorrent-rasterbar.so* qbittorrent-nox
+make install -j `nproc`
+zip -r ../qbittorrent_linux.zip static
