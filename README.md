@@ -4,7 +4,7 @@
 ### qbittorrent-nox
 - `v4.4.1`
 
-## Install
+## Install Prebuilt Binaries for FreeBSD
 ```sh
 # get files
 fetch https://github.com/gek64/qbittorrent-nox-freebsd/releases/download/v4.4.1/libtorrent-rasterbar.so.2.0.5
