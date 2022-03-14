@@ -24,21 +24,28 @@ chmod +x /usr/local/bin/qbittorrent-nox
 
 ## Compile
 ### How to compile if prebuilt binaries can not run
+#### FreeBSD
 ```sh
 fetch https://github.com/gek64/qbittorrent-nox-shared/raw/main/qbittorrent_build_freebsd.sh
 chmod +x qbittorrent_build_freebsd.sh
 ./qbittorrent_build_freebsd.sh
 ```
+#### Linux
+```sh
+fetch https://github.com/gek64/qbittorrent-nox-shared/raw/main/qbittorrent_build_linux.sh
+chmod +x qbittorrent_build_linux.sh
+./qbittorrent_build_linux.sh
+```
 
 ## System Requirements
-### Prebuilt Binaries
+### FressBSD Prebuilt Binaries
 - x64 Architecture CPU
-- freebsd version tested on freebsd 13
+- freebsd 13 and above
 
 ### Compile
-- Any architecture CPU
-- RAM > 4GB (recommend)
-- Disk > 10GB (recommend)
+- Linux or FreeBSD system
+- RAM > 2GB
+- Disk > 10GB
 
 
 ## License
