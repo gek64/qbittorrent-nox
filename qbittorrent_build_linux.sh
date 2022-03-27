@@ -9,7 +9,7 @@ apt install -y build-essential git libboost-tools-dev libboost-dev libboost-syst
 git clone --depth 1 --recurse-submodules --branch `git ls-remote --tags --refs https://github.com/arvidn/libtorrent.git | tail --lines=1 | cut -d "/" -f 3` https://github.com/arvidn/libtorrent.git
 cd libtorrent || exit
 b2 install toolset=gcc cxxstd=17 variant=release crypto=openssl dht=on -j `nproc` link=shared runtime-link=shared boost-link=static --prefix=./static/
-cp static/lib/libtorrent-rasterbar.so.2.0.5 ..
+cp static/lib/libtorrent-rasterbar.so* ..
 cd .. || exit
 
 # qbittorrent
