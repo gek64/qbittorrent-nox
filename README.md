@@ -22,7 +22,7 @@ chmod +x /usr/local/bin/qbittorrent-nox
 
 # install service
 fetch https://github.com/gek64/qbtsh/raw/main/service/qbittorrent
-mkdir /usr/local/etc/rc.d/
+mkdir -p /usr/local/etc/rc.d/
 cp qbittorrent /usr/local/etc/rc.d/qbittorrent && chmod +x /usr/local/etc/rc.d/qbittorrent
 service qbittorrent enable && service qbittorrent start
 
