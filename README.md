@@ -56,7 +56,7 @@ chmod +x qbittorrent_build_freebsd.sh
 ```
 #### Linux
 ```sh
-fetch https://github.com/gek64/qbittorrent-nox-shared/raw/main/qbittorrent_build_linux.sh
+curl -LOJ https://github.com/gek64/qbittorrent-nox-shared/raw/main/qbittorrent_build_linux.sh
 chmod +x qbittorrent_build_linux.sh
 ./qbittorrent_build_linux.sh
 ```
