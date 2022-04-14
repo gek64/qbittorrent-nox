@@ -73,5 +73,5 @@ chmod +x qbittorrent_build_linux.sh
 
 
 ## License
-- **GNU Lesser General Public License v2.1**
+- **MIT License**
 - See `LICENSE` for details
