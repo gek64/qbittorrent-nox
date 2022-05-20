@@ -1,17 +1,17 @@
 ## Version
 ### libtorrent
-- `v2.0.5`
+- `v2.0.6`
 ### qbittorrent-nox
 - `v4.4.2`
 
 ## Install prebuilt binaries for freebsd
 ```sh
 # get files
-fetch https://github.com/gek64/qbittorrent-nox-freebsd/releases/download/v4.4.2/libtorrent-rasterbar.so.2.0.5
+fetch https://github.com/gek64/qbittorrent-nox-freebsd/releases/download/v4.4.2/libtorrent-rasterbar.so.2.0.6
 fetch https://github.com/gek64/qbittorrent-nox-freebsd/releases/download/v4.4.2/qbittorrent-nox
 
 # copy to folder
-cp libtorrent-rasterbar.so.2.0.5 /usr/local/lib/
+cp libtorrent-rasterbar.so* /usr/local/lib/
 cp qbittorrent-nox /usr/local/bin/
 
 # install dependencies 
