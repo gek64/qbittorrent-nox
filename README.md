@@ -11,10 +11,8 @@ fetch https://github.com/gek64/qbittorrent-nox-freebsd/releases/download/v4.4.2/
 fetch https://github.com/gek64/qbittorrent-nox-freebsd/releases/download/v4.4.2/qbittorrent-nox
 
 # copy to folder
-mkdir -p /usr/local/lib/
-mkdir -p /usr/local/bin/
-cp libtorrent-rasterbar.so* /usr/local/lib/
-cp qbittorrent-nox /usr/local/bin/
+mkdir -p /usr/local/lib/ && cp libtorrent-rasterbar.so* /usr/local/lib/
+mkdir -p /usr/local/bin/ && cp qbittorrent-nox /usr/local/bin/
 
 # install dependencies 
 pkg update && pkg install -y openssl qt5-network qt5-xml qt5-sql
@@ -24,8 +22,7 @@ chmod +x /usr/local/bin/qbittorrent-nox
 
 # install service
 fetch https://github.com/gek64/qbtsh/raw/main/service/qbittorrent
-mkdir -p /usr/local/etc/rc.d/
-cp qbittorrent /usr/local/etc/rc.d/qbittorrent && chmod +x /usr/local/etc/rc.d/qbittorrent
+mkdir -p /usr/local/etc/rc.d/ && cp qbittorrent /usr/local/etc/rc.d/qbittorrent && chmod +x /usr/local/etc/rc.d/qbittorrent
 service qbittorrent enable && service qbittorrent start
 
 # visit http://localhost:8080
