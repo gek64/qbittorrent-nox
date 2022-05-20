@@ -11,6 +11,8 @@ fetch https://github.com/gek64/qbittorrent-nox-freebsd/releases/download/v4.4.2/
 fetch https://github.com/gek64/qbittorrent-nox-freebsd/releases/download/v4.4.2/qbittorrent-nox
 
 # copy to folder
+mkdir -p /usr/local/lib/
+mkdir -p /usr/local/bin/
 cp libtorrent-rasterbar.so* /usr/local/lib/
 cp qbittorrent-nox /usr/local/bin/
 
@@ -35,7 +37,7 @@ service qbittorrent enable && service qbittorrent start
 service qbittorrent stop && service qbittorrent disable
 rm /usr/local/etc/rc.d/qbittorrent
 
-# uninstall dependencies
+# uninstall all dependencies
 rm /usr/local/lib/libtorrent-rasterbar.so*
 pkg remove -y openssl qt5-network qt5-xml qt5-sql
 pkg autoremove -y
