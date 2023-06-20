@@ -9,33 +9,33 @@ pkg install -y libtorrent-rasterbar
 pkg install -y openssl qt5-network qt5-sql qt5-xml
 
 # zlib
-unzip zlib-1.2.11.zip
-cd zlib-1.2.11 || exit
+git clone --depth 1 --recurse-submodules --branch `git ls-remote --tags --refs https://github.com/madler/zlib.git | tail --lines=1 | cut -d "/" -f 3` https://github.com/madler/zlib.git
+cd zlib || exit
 ./configure -std=c11 --static
 make -j `sysctl -n hw.ncpu`
 make install
 cd ..
 
 # openssl
-unzip openssl-OpenSSL_1_1_1m.zip
-cd openssl-OpenSSL_1_1_1m || exit
+git clone --depth 1 --recurse-submodules --branch "openssl-3.1" https://github.com/openssl/openssl.git
+cd openssl || exit
 ./Configure no-shared no-asm -std=c11 BSD-x86_64
 make -j `sysctl -n hw.ncpu`
+# install_sw相比于install,不安装文档,只安装库文件和头文件
 make install_sw
 cd ..
 
 # boost
-unzip boost_1_76_0.zip
-cd boost_1_76_0 || exit
+git clone --depth 1 --recurse-submodules --branch `git ls-remote --tags --refs https://github.com/boostorg/boost.git | tail --lines=1 | cut -d "/" -f 3` https://github.com/boostorg/boost.git
+cd boost || exit
 ./bootstrap.sh
 ./b2 install toolset=clang -j `sysctl -n hw.ncpu` variant=release threading=multi link=static runtime-link=static --prefix="${qbt_install_dir}"
 cd ..
 
 # libtorrent
-unzip libtorrent-rasterbar-2.0.5.zip
-cd libtorrent-rasterbar-2.0.5 || exit
-b2 install toolset=clang cxxstd=17 variant=release crypto=openssl dht=on -j `sysctl -n hw.ncpu` cxxflags="-I/usr/local/include/" linkflags="-L/usr/local/lib/" link=static runtime-link=static boost-link=static
-b2 install toolset=clang cxxstd=17 variant=release crypto=openssl dht=on -j `sysctl -n hw.ncpu` cxxflags="-I/usr/local/include/" linkflags="-L/usr/local/lib/" link=shared runtime-link=shared boost-link=static
+git clone --depth 1 --recurse-submodules --branch `git ls-remote --tags --refs https://github.com/arvidn/libtorrent.git | tail --lines=1 | cut -d "/" -f 3` https://github.com/arvidn/libtorrent.git
+cd libtorrent || exit
+b2 install toolset=clang cxxstd=17 variant=release crypto=openssl dht=on -j `sysctl -n hw.ncpu` cxxflags="-I/usr/local/include/" linkflags="-L/usr/local/lib/" link=static runtime-link=static boost-link=static --prefix=./static/
 cd ..
 
 # qt
