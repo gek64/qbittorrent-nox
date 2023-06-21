@@ -29,7 +29,7 @@ cd ..
 git clone --depth 1 --recurse-submodules --branch `git ls-remote --tags --refs https://github.com/boostorg/boost.git | tail --lines=1 | cut -d "/" -f 3` https://github.com/boostorg/boost.git
 cd boost || exit
 ./bootstrap.sh
-./b2 install toolset=clang -j `sysctl -n hw.ncpu` variant=release threading=multi link=static runtime-link=static --prefix="${qbt_install_dir}"
+./b2 install toolset=clang -j `sysctl -n hw.ncpu` variant=release threading=multi link=static runtime-link=static
 cd ..
 
 # libtorrent
